@@ -1,26 +1,20 @@
-name: 'Continuous Delivery'
+name: 'Production'
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - "v*"
+  workflow_dispatch:
 
 concurrency:
-  group: cd-${{ github.ref }}
+  group: production-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  release:
-    uses: ./.github/workflows/wc-release.yml
-    with:
-      gh-app-id: ${{ vars.BOT_APP_ID }}
-    secrets:
-      gh-app-private-key: ${{ secrets.BOT_PRIVATE_KEY }}
-
   deploy:
     uses: ./.github/workflows/wc-deploy-cloudflare-pages.yml
     with:
-      project-name: 'asis-quest-staging'
+      project-name: 'asis-quest'
       branch: 'main'
       gh-app-id: ${{ vars.BOT_APP_ID }}
       pr-comment-enabled: false

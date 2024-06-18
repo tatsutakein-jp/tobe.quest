@@ -1,0 +1,26 @@
+name: "Preview"
+
+on:
+  pull_request:
+
+concurrency:
+  group: preview-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  changed:
+    uses: ./.github/workflows/wc-changed.yml
+
+  preview:
+    uses: ./.github/workflows/wc-deploy-cloudflare-pages.yml
+    needs: changed
+    if: needs.changed.outputs.website == 'true'
+    with:
+      project-name: 'asis-quest'
+      branch: 'preview'
+      gh-app-id: ${{ vars.BOT_APP_ID }}
+      pr-comment-enabled: true
+    secrets:
+      cloudflare-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      cloudflare-api-token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      gh-app-private-key: ${{ secrets.BOT_PRIVATE_KEY }}
