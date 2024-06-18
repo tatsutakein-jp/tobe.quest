@@ -5,6 +5,8 @@ on:
     outputs:
       actions:
         value: ${{ jobs.changed.outputs.actions }}
+      website:
+        value: ${{ jobs.changed.outputs.website }}
 
 permissions:
   contents: read
@@ -15,6 +17,7 @@ jobs:
     runs-on: ubuntu-22.04
     outputs:
       actions: ${{ steps.changes.outputs.actions }}
+      website: ${{ steps.changes.outputs.website }}
     steps:
       # https://github.com/marketplace/actions/checkout
       - name: Checkout
@@ -28,3 +31,10 @@ jobs:
           filters: |
             actions:
               - '.github/workflows/*.yml'
+            website:
+              - 'public/**/*'
+              - 'src/**/*'
+              - '.tool-versions'
+              - 'astro.config.mjs'
+              - 'package.json'
+              - 'tsconfig.json'
