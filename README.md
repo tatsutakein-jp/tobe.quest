@@ -64,7 +64,7 @@ Thanks to our wonderful contributors!
 
 ## Repo Activity
 
-![Repobeats](https://repobeats.axiom.co/api/embed/b6cb2d91ae08a4b2f4ae2a14f8471ece656a781b.svg "Repobeats analytics image")
+![Repobeats](https://repobeats.axiom.co/api/embed/1b8a452d389d0d43b80b5c46484d0593e38bf387.svg "Repobeats analytics image")
 
 ## License
 
