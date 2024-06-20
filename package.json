@@ -18,7 +18,7 @@
     "plop": "plop"
   },
   "dependencies": {
-    "astro": "4.10.3"
+    "astro": "4.11.0"
   },
   "devDependencies": {
     "@astrojs/check": "0.7.0",
