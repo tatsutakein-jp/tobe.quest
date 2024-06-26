@@ -18,7 +18,7 @@
     "plop": "plop"
   },
   "dependencies": {
-    "astro": "4.11.1",
+    "astro": "4.11.3",
     "sharp": "0.33.4"
   },
   "devDependencies": {
