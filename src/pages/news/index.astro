@@ -1,0 +1,22 @@
+---
+import For from '@/components/For.astro'
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import { fetchNewsList } from '@/lib/api'
+import type { News } from '@/types'
+
+const newsList = await fetchNewsList()
+---
+
+<BaseLayout>
+  <ul class="stack gap-20 lg:gap-48">
+    <For each={newsList}>{(news: News) => (
+      <li>
+        <a href=`news/${news.slug}`>
+          <h2>{news.title}</h2>
+          <p>{news.publishedAt}</p>
+          <p>{news.excerpt}</p>
+        </a>
+      </li>
+    )}</For>
+  </ul>
+</BaseLayout>

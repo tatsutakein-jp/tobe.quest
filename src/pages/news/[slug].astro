@@ -1,0 +1,16 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import { fetchNewsBySlug } from '../../lib/api'
+
+const { slug } = Astro.params as { slug: string }
+
+const news = await fetchNewsBySlug(slug)
+---
+
+<BaseLayout>
+  <div class="stack gap-20 lg:gap-48">
+    <h2>{news.title}</h2>
+    <p>{news.publishedAt}</p>
+    <div set:html={news.content} />
+  </div>
+</BaseLayout>
