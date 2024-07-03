@@ -27,18 +27,18 @@ async function fetchGraphQL(
 /**
  * Fetches the list of news
  */
-export async function fetchNewsList() {
+export async function fetchNewsList(): Promise<News[]> {
   const { errors, data } = await fetchGraphQL(
     `
-  query GetNewsList {
-    news {
-        title
-        slug
-        publishedAt
-        excerpt
-        coverImageUrl
-        content
-    }
+query GetNewsList {
+  news {
+    title
+    slug
+    publishedAt
+    excerpt
+    coverImageUrl
+    content
+  }
 }
 `,
     'GetNewsList',
@@ -52,4 +52,37 @@ export async function fetchNewsList() {
 
   console.log(data)
   return data.news as News[]
+}
+
+/**
+ * Fetches the list of news
+ */
+export async function fetchNewsBySlug(slug: string): Promise<News> {
+  const { errors, data } = await fetchGraphQL(
+    `
+query GetNewsBySlug($slug: String) {
+  news(where: {slug: {_eq: $slug}}) {
+    title
+    slug
+    publishedAt
+    excerpt
+    coverImageUrl
+    content
+  }
+}
+`,
+    'GetNewsBySlug',
+    {
+      slug
+    }
+  )
+
+  if (errors) {
+    // handle those errors like a pro
+    console.error(errors)
+  }
+
+  console.log(data)
+  // biome-ignore lint/style/noNonNullAssertion: <explanation>
+  return (data.news as News[])[0]!
 }
