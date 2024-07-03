@@ -20,6 +20,7 @@ jobs:
       branch: 'preview'
       gh-app-id: ${{ vars.BOT_APP_ID }}
       pr-comment-enabled: true
+      backend-url: ${{ vars.DEV_BACKEND_URL }}
     secrets:
       cloudflare-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       cloudflare-api-token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
