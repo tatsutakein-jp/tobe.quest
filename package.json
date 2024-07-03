@@ -15,6 +15,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "clean": "git clean -xdf node_modules",
+    "lint": "biome lint ./src",
+    "lint:fix": "biome lint --write ./src",
+    "format": "biome check --write ./src",
     "plop": "plop"
   },
   "dependencies": {
@@ -23,6 +26,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "0.7.0",
+    "@biomejs/biome": "1.8.3",
     "@commitlint/cli": "19.3.0",
     "@commitlint/config-conventional": "19.2.2",
     "lefthook": "1.6.18",
