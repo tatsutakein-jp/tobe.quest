@@ -67,9 +67,7 @@ jobs:
         with:
           apiToken: ${{ secrets.cloudflare-api-token }}
           accountId: ${{ secrets.cloudflare-account-id }}
-          command: pages deploy ./dist --project-name=${{ inputs.project-name }}
-        env:
-          CF_PAGES_BRANCH: ${{ inputs.branch }}
+          command: pages deploy ./dist --project-name=${{ inputs.project-name }} --branch=${{ inputs.branch }}
 
       # https://github.com/marketplace/actions/lighthouse-check
       - name: Lighthouse
