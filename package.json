@@ -23,11 +23,11 @@
   "dependencies": {
     "@astrojs/cloudflare": "11.0.5",
     "@astrojs/sitemap": "3.1.6",
-    "astro": "4.15.7"
+    "astro": "4.15.8"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.3",
-    "@biomejs/biome": "1.9.1",
+    "@biomejs/biome": "1.9.2",
     "@commitlint/cli": "19.5.0",
     "@commitlint/config-conventional": "19.5.0",
     "lefthook": "1.7.15",
