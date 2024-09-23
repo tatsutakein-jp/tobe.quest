@@ -21,7 +21,7 @@
     "plop": "plop"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "11.0.5",
+    "@astrojs/cloudflare": "11.1.0",
     "@astrojs/sitemap": "3.1.6",
     "astro": "4.15.8"
   },
@@ -30,7 +30,7 @@
     "@biomejs/biome": "1.9.2",
     "@commitlint/cli": "19.5.0",
     "@commitlint/config-conventional": "19.5.0",
-    "lefthook": "1.7.15",
+    "lefthook": "1.7.16",
     "plop": "4.0.1",
     "typescript": "5.6.2"
   }
