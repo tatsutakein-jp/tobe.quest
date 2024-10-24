@@ -41,7 +41,7 @@ jobs:
 
       # https://github.com/marketplace/actions/mise-action
       - name: mise action
-        uses: jdx/mise-action@f8dfbcc150159126838e44b882bf34bd98fd90f3 # v2.1.0
+        uses: jdx/mise-action@c1606014a9b1b7cd3e7c7f5fc607a25351fdffec # v2.1.1
 
       - name: Install deps
         run: bun install --frozen-lockfile
@@ -62,7 +62,7 @@ jobs:
 
       # https://github.com/marketplace/actions/cloudflare-pages-github-action
       - name: Publish to Cloudflare Pages
-        uses: cloudflare/wrangler-action@9681c2997648301493e78cacbfb790a9f19c833f # v3.9.0
+        uses: cloudflare/wrangler-action@39c2b5a1226e5718f92a2749a8988cce31e78a76 # v3.10.0
         id: cloudflare-pages
         with:
           apiToken: ${{ secrets.cloudflare-api-token }}
