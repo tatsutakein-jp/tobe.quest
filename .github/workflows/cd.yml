@@ -13,7 +13,7 @@ jobs:
   deploy:
     uses: ./.github/workflows/wc-deploy-cloudflare-pages.yml
     with:
-      project-name: 'asis-quest'
+      project-name: 'tobe-quest'
       branch: 'staging'
       gh-app-id: ${{ vars.BOT_APP_ID }}
       pr-comment-enabled: false
