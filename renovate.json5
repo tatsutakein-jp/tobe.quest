@@ -3,10 +3,13 @@
   "extends": [
     "config:base",
     ":automergeMinor",
-    ":disableDependencyDashboard",
-    ":prHourlyLimitNone",
-    ":timezone(Asia/Tokyo)"
   ],
+  "timezone": "Asia/Tokyo",
+  "schedule": [
+    // "every monday and thursday at 7:00",
+    "* 7 * * 1,4"
+  ],
+  "dependencyDashboard": false,
   "labels": [
     "dependencies"
   ],
