@@ -1,8 +1,8 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![renovate](https://img.shields.io/badge/maintaied%20with-renovate-blue?logo=renovatebot)](https://app.renovatebot.com/dashboard)
-[![GitHub last commit (branch)](https://img.shields.io/github/last-commit/tatsutakein-jp/asis.quest)](https://github.com/tatsutakein-jp/asis.quest/commits/main/)
+[![GitHub last commit (branch)](https://img.shields.io/github/last-commit/tatsutakein-jp/tobe.quest)](https://github.com/tatsutakein-jp/tobe.quest/commits/main/)
 
-# asis.quest
+# tobe.quest
 
 ## Features
 
@@ -58,8 +58,8 @@ TBD
 
 Thanks to our wonderful contributors!
 
-<a href="https://github.com/tatsutakein-jp/asis.quest/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=tatsutakein-jp/asis.quest" alt="Contributors" />
+<a href="https://github.com/tatsutakein-jp/tobe.quest/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=tatsutakein-jp/tobe.quest" alt="Contributors" />
 </a>
 
 ## Repo Activity
@@ -68,5 +68,5 @@ Thanks to our wonderful contributors!
 
 ## License
 
-asis.quest is distributed under the terms of the MIT License. See the [license](LICENSE) for more
+tobe.quest is distributed under the terms of the MIT License. See the [license](LICENSE) for more
 information.

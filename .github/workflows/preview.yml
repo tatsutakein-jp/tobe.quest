@@ -16,7 +16,7 @@ jobs:
     needs: changed
     if: needs.changed.outputs.website == 'true'
     with:
-      project-name: 'asis-quest'
+      project-name: 'tobe-quest'
       branch: 'preview'
       gh-app-id: ${{ vars.BOT_APP_ID }}
       pr-comment-enabled: true
