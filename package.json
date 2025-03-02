@@ -32,6 +32,6 @@
     "@commitlint/config-conventional": "19.7.1",
     "lefthook": "1.11.2",
     "plop": "4.0.1",
-    "typescript": "5.7.3"
+    "typescript": "5.8.2"
   }
 }
